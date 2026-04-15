@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Color del tema para evitar flash blanco en navegadores móviles -->
+    <meta name="theme-color" content="#051535" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload de imágenes críticas para carga instantánea -->
+    <link rel="preload" as="image" href="/src/assets/fondos/fondoEspecialidades.png" />
+    <link rel="preload" as="image" href="/src/assets/botones/preparatoria.png" />
+    <link rel="preload" as="image" href="/src/assets/botones/elemental.png" />
+    <link rel="preload" as="image" href="/src/assets/botones/media.png" />
+    <link rel="preload" as="image" href="/src/assets/botones/superior.png" />
+    <link rel="preload" as="image" href="/src/assets/botones/bachillerato.png" />
+    
+    <title>ruleta-del-saber</title>
+  </head>
+  <body>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  <style>
+    html, body, #root {
+      margin: 0 !important;
+      padding: 0;
+      height: 100%;
+      /* Fondo oscuro para evitar destellos blancos durante navegación */
+      background-color: #051535;
+      overflow: hidden;
+    }
+
+    /* Prevenir FOUC (Flash of Unstyled Content) */
+    body {
+      opacity: 1;
+      transition: opacity 0.2s ease-in;
+    }
+  </style>
+</html>

@@ -1,0 +1,148 @@
+export const preguntas = {
+  // ==================== RULETA BÁSICA (Elemental/Media) ====================
+  
+  "lengua-y-literatura": [
+    { id: 1, pregunta: "¿Cuántas vocales tiene el alfabeto español?", opciones: ["5", "3", "6", "4"], correcta: 0 },
+    { id: 2, pregunta: "¿Qué signo se usa al final de una pregunta?", opciones: ["?", "!", ".", ","], correcta: 0 },
+    { id: 3, pregunta: "¿Cuál es el plural de 'lápiz'?", opciones: ["Lápices", "Lápizs", "Lápizes", "Lapices"], correcta: 0 },
+    { id: 4, pregunta: "¿Qué tipo de palabra es 'rápidamente'?", opciones: ["Adverbio", "Sustantivo", "Verbo", "Adjetivo"], correcta: 0 },
+    { id: 5, pregunta: "¿Cuál es el sinónimo de 'feliz'?", opciones: ["Contento", "Triste", "Enojado", "Cansado"], correcta: 0 },
+    { id: 6, pregunta: "¿Qué es un sustantivo?", opciones: ["Nombre de personas, animales o cosas", "Una acción", "Una cualidad", "Un lugar"], correcta: 0 },
+    { id: 7, pregunta: "¿Cuál es el antónimo de 'grande'?", opciones: ["Pequeño", "Alto", "Gordo", "Largo"], correcta: 0 },
+    { id: 8, pregunta: "¿Con qué letra empieza una oración?", opciones: ["Mayúscula", "Minúscula", "Número", "Símbolo"], correcta: 0 }
+  ],
+
+  "ensenanzas-religiosas": [
+    { id: 1, pregunta: "¿Quién construyó el arca según la Biblia?", opciones: ["Noé", "Moisés", "Abraham", "David"], correcta: 0 },
+    { id: 2, pregunta: "¿Cuántos días descansó Dios después de crear el mundo?", opciones: ["1", "2", "3", "7"], correcta: 0 },
+    { id: 3, pregunta: "¿Qué celebramos en Navidad?", opciones: ["El nacimiento de Jesús", "La resurrección", "Pentecostés", "Semana Santa"], correcta: 0 },
+    { id: 4, pregunta: "¿Cuál es el primer mandamiento?", opciones: ["Amarás a Dios sobre todas las cosas", "No matarás", "No robarás", "Honrarás a tu padre y madre"], correcta: 0 },
+    { id: 5, pregunta: "¿Quiénes fueron los padres de Jesús?", opciones: ["María y José", "Ana y Juan", "Sara y Abraham", "Eva y Adán"], correcta: 0 },
+    { id: 6, pregunta: "¿Dónde nació Jesús?", opciones: ["Belén", "Nazaret", "Jerusalén", "Roma"], correcta: 0 },
+    { id: 7, pregunta: "¿Qué animal habló con Eva en el Jardín del Edén?", opciones: ["Serpiente", "León", "Paloma", "Cordero"], correcta: 0 },
+    { id: 8, pregunta: "¿Cuántos apóstoles tuvo Jesús?", opciones: ["12", "10", "7", "15"], correcta: 0 }
+  ],
+
+  "ciencias-naturales": [
+    { id: 1, pregunta: "¿Cuál es el planeta más cercano al Sol?", opciones: ["Mercurio", "Venus", "Tierra", "Marte"], correcta: 0 },
+    { id: 2, pregunta: "¿Qué gas necesitamos para respirar?", opciones: ["Oxígeno", "Nitrógeno", "Dióxido de carbono", "Hidrógeno"], correcta: 0 },
+    { id: 3, pregunta: "¿Cuántas patas tiene una araña?", opciones: ["8", "6", "4", "10"], correcta: 0 },
+    { id: 4, pregunta: "¿Qué órgano bombea la sangre en nuestro cuerpo?", opciones: ["Corazón", "Pulmones", "Cerebro", "Hígado"], correcta: 0 },
+    { id: 5, pregunta: "¿Cómo se llama el proceso de las plantas para hacer su alimento?", opciones: ["Fotosíntesis", "Respiración", "Digestión", "Transpiración"], correcta: 0 },
+    { id: 6, pregunta: "¿Cuál es el estado del agua cuando hierve?", opciones: ["Gaseoso", "Líquido", "Sólido", "Plasma"], correcta: 0 },
+    { id: 7, pregunta: "¿Qué parte de la planta absorbe el agua?", opciones: ["Raíz", "Tallo", "Hojas", "Flores"], correcta: 0 },
+    { id: 8, pregunta: "¿Cuál es el satélite natural de la Tierra?", opciones: ["La Luna", "El Sol", "Marte", "Venus"], correcta: 0 }
+  ],
+
+  "social-studies": [
+    { id: 1, pregunta: "¿Cuál es la capital de Ecuador?", opciones: ["Quito", "Guayaquil", "Cuenca", "Loja"], correcta: 0 },
+    { id: 2, pregunta: "¿Cuántos continentes hay en el mundo?", opciones: ["7", "5", "6", "8"], correcta: 0 },
+    { id: 3, pregunta: "¿Qué océano está al oeste de América?", opciones: ["Pacífico", "Atlántico", "Índico", "Ártico"], correcta: 0 },
+    { id: 4, pregunta: "¿Cuál es el país más grande del mundo?", opciones: ["Rusia", "China", "Estados Unidos", "Brasil"], correcta: 0 },
+    { id: 5, pregunta: "¿Qué representa la bandera de un país?", opciones: ["Su identidad nacional", "Su economía", "Su religión", "Su idioma"], correcta: 0 },
+    { id: 6, pregunta: "¿Cuál es el río más largo de Ecuador?", opciones: ["Guayas", "Napo", "Pastaza", "Esmeraldas"], correcta: 0 },
+    { id: 7, pregunta: "¿Cuántas regiones naturales tiene Ecuador?", opciones: ["4", "3", "5", "2"], correcta: 0 },
+    { id: 8, pregunta: "¿Qué es un mapa?", opciones: ["Representación de un territorio", "Un tipo de libro", "Una ley", "Un documento"], correcta: 0 }
+  ],
+
+  "ingles": [
+    { id: 1, pregunta: "What color is the sky?", opciones: ["Blue", "Green", "Red", "Yellow"], correcta: 0 },
+    { id: 2, pregunta: "How do you say 'gato' in English?", opciones: ["Cat", "Dog", "Bird", "Fish"], correcta: 0 },
+    { id: 3, pregunta: "What is the opposite of 'big'?", opciones: ["Small", "Tall", "Long", "Wide"], correcta: 0 },
+    { id: 4, pregunta: "How many days are in a week?", opciones: ["Seven", "Five", "Six", "Ten"], correcta: 0 },
+    { id: 5, pregunta: "What do you say when you meet someone?", opciones: ["Hello", "Goodbye", "Sorry", "Thanks"], correcta: 0 },
+    { id: 6, pregunta: "What is 'manzana' in English?", opciones: ["Apple", "Orange", "Banana", "Grape"], correcta: 0 },
+    { id: 7, pregunta: "What animal says 'woof'?", opciones: ["Dog", "Cat", "Cow", "Duck"], correcta: 0 },
+    { id: 8, pregunta: "What color is grass?", opciones: ["Green", "Blue", "Red", "Brown"], correcta: 0 }
+  ],
+
+  "matematicas": [
+    { id: 1, pregunta: "¿Cuánto es 5 + 3?", opciones: ["8", "7", "9", "6"], correcta: 0 },
+    { id: 2, pregunta: "¿Cuánto es 10 - 4?", opciones: ["6", "5", "7", "4"], correcta: 0 },
+    { id: 3, pregunta: "¿Cuántos lados tiene un triángulo?", opciones: ["3", "4", "5", "6"], correcta: 0 },
+    { id: 4, pregunta: "¿Cuánto es 3 x 4?", opciones: ["12", "7", "10", "15"], correcta: 0 },
+    { id: 5, pregunta: "¿Qué número viene después del 99?", opciones: ["100", "98", "101", "999"], correcta: 0 },
+    { id: 6, pregunta: "¿Cuánto es 20 ÷ 4?", opciones: ["5", "4", "6", "8"], correcta: 0 },
+    { id: 7, pregunta: "¿Cuántos lados tiene un cuadrado?", opciones: ["4", "3", "5", "6"], correcta: 0 },
+    { id: 8, pregunta: "¿Cuál es el doble de 7?", opciones: ["14", "12", "16", "10"], correcta: 0 }
+  ],
+
+  // ==================== RULETA AVANZADA (Superior/Bachillerato) ====================
+
+  "historia": [
+    { id: 1, pregunta: "¿En qué año terminó la Segunda Guerra Mundial?", opciones: ["1945", "1918", "1939", "1950"], correcta: 0 },
+    { id: 2, pregunta: "¿Quién fue el libertador de América del Sur?", opciones: ["Simón Bolívar", "Napoleón", "Cristóbal Colón", "San Martín"], correcta: 0 },
+    { id: 3, pregunta: "¿En qué año llegó Colón a América?", opciones: ["1492", "1500", "1450", "1520"], correcta: 0 },
+    { id: 4, pregunta: "¿Cuál fue la primera civilización de Mesopotamia?", opciones: ["Sumeria", "Egipcia", "Romana", "Griega"], correcta: 0 },
+    { id: 5, pregunta: "¿Qué revolución comenzó en Francia en 1789?", opciones: ["Revolución Francesa", "Revolución Industrial", "Revolución Rusa", "Revolución Americana"], correcta: 0 },
+    { id: 6, pregunta: "¿Quién fue el primer presidente de Ecuador?", opciones: ["Juan José Flores", "Gabriel García Moreno", "Eloy Alfaro", "Vicente Rocafuerte"], correcta: 0 },
+    { id: 7, pregunta: "¿Qué imperio construyó Machu Picchu?", opciones: ["Inca", "Maya", "Azteca", "Olmeca"], correcta: 0 },
+    { id: 8, pregunta: "¿En qué siglo ocurrió el Renacimiento?", opciones: ["XV-XVI", "XII-XIII", "XVIII-XIX", "X-XI"], correcta: 0 }
+  ],
+
+  "fisica": [
+    { id: 1, pregunta: "¿Cuál es la unidad de medida de la fuerza?", opciones: ["Newton", "Joule", "Watt", "Volt"], correcta: 0 },
+    { id: 2, pregunta: "¿Cuál es la velocidad de la luz aproximadamente?", opciones: ["300,000 km/s", "150,000 km/s", "1,000 km/s", "500,000 km/s"], correcta: 0 },
+    { id: 3, pregunta: "¿Qué ley establece que F = m × a?", opciones: ["Segunda ley de Newton", "Primera ley de Newton", "Ley de Ohm", "Ley de Hooke"], correcta: 0 },
+    { id: 4, pregunta: "¿Cuál es la unidad de medida de la energía?", opciones: ["Joule", "Newton", "Pascal", "Ampere"], correcta: 0 },
+    { id: 5, pregunta: "¿Qué tipo de energía tiene un objeto en movimiento?", opciones: ["Cinética", "Potencial", "Térmica", "Nuclear"], correcta: 0 },
+    { id: 6, pregunta: "¿Cuál es la fórmula de la velocidad?", opciones: ["v = d/t", "v = m×a", "v = F/m", "v = E/t"], correcta: 0 },
+    { id: 7, pregunta: "¿Qué partícula tiene carga negativa?", opciones: ["Electrón", "Protón", "Neutrón", "Fotón"], correcta: 0 },
+    { id: 8, pregunta: "¿Cuál es la aceleración de la gravedad en la Tierra?", opciones: ["9.8 m/s²", "10.5 m/s²", "8.5 m/s²", "12 m/s²"], correcta: 0 }
+  ],
+
+  "lengua-y-literatura-avanzado": [
+    { id: 1, pregunta: "¿Qué figura literaria consiste en atribuir cualidades humanas a objetos?", opciones: ["Personificación", "Metáfora", "Símil", "Hipérbole"], correcta: 0 },
+    { id: 2, pregunta: "¿Quién escribió 'Don Quijote de la Mancha'?", opciones: ["Miguel de Cervantes", "Gabriel García Márquez", "Pablo Neruda", "Jorge Luis Borges"], correcta: 0 },
+    { id: 3, pregunta: "¿Qué es una oración subordinada?", opciones: ["Depende de otra oración principal", "Es independiente", "No tiene verbo", "Solo tiene sujeto"], correcta: 0 },
+    { id: 4, pregunta: "¿Cuál es el movimiento literario de García Márquez?", opciones: ["Realismo mágico", "Romanticismo", "Barroco", "Modernismo"], correcta: 0 },
+    { id: 5, pregunta: "¿Qué es un soneto?", opciones: ["Poema de 14 versos", "Poema de 10 versos", "Poema libre", "Poema de 8 versos"], correcta: 0 },
+    { id: 6, pregunta: "¿Qué tipo de narrador conoce los pensamientos de todos los personajes?", opciones: ["Omnisciente", "Protagonista", "Testigo", "Objetivo"], correcta: 0 },
+    { id: 7, pregunta: "¿Qué es una elipsis en literatura?", opciones: ["Omisión de palabras", "Repetición de palabras", "Exageración", "Comparación"], correcta: 0 },
+    { id: 8, pregunta: "¿Cuál es el género literario de 'La Ilíada'?", opciones: ["Épico", "Lírico", "Dramático", "Narrativo"], correcta: 0 }
+  ],
+
+  "razonamiento-abstracto": [
+    { id: 1, pregunta: "Si A > B y B > C, entonces:", opciones: ["A > C", "A < C", "A = C", "No se puede determinar"], correcta: 0 },
+    { id: 2, pregunta: "¿Cuál es el siguiente número en la secuencia: 2, 4, 8, 16, ...?", opciones: ["32", "24", "20", "18"], correcta: 0 },
+    { id: 3, pregunta: "Si todos los A son B, y todos los B son C, entonces:", opciones: ["Todos los A son C", "Algunos A son C", "Ningún A es C", "No se relacionan"], correcta: 0 },
+    { id: 4, pregunta: "¿Qué figura completa la serie: ○, □, △, ○, □, ...?", opciones: ["△", "○", "□", "◇"], correcta: 0 },
+    { id: 5, pregunta: "Si hoy es miércoles, ¿qué día será dentro de 10 días?", opciones: ["Sábado", "Viernes", "Domingo", "Lunes"], correcta: 0 },
+    { id: 6, pregunta: "¿Cuál es el número que falta: 3, 6, 12, __, 48?", opciones: ["24", "18", "30", "36"], correcta: 0 },
+    { id: 7, pregunta: "Si AGUA = 1-7-21-1, entonces CASA = ?", opciones: ["3-1-19-1", "2-1-18-1", "4-2-20-2", "3-2-19-2"], correcta: 0 },
+    { id: 8, pregunta: "¿Cuántos triángulos hay en una estrella de 5 puntas?", opciones: ["10", "5", "8", "15"], correcta: 0 }
+  ],
+
+  "matematicas-avanzado": [
+    { id: 1, pregunta: "¿Cuál es la derivada de x²?", opciones: ["2x", "x", "2x²", "x²"], correcta: 0 },
+    { id: 2, pregunta: "¿Cuál es el valor de π aproximadamente?", opciones: ["3.1416", "2.7182", "1.6180", "3.3333"], correcta: 0 },
+    { id: 3, pregunta: "Si log₁₀(100) = x, ¿cuánto vale x?", opciones: ["2", "10", "100", "1"], correcta: 0 },
+    { id: 4, pregunta: "¿Cuál es la integral de 2x?", opciones: ["x²", "2", "x", "2x²"], correcta: 0 },
+    { id: 5, pregunta: "En un triángulo rectángulo, si a=3 y b=4, ¿cuánto vale la hipotenusa?", opciones: ["5", "7", "6", "12"], correcta: 0 },
+    { id: 6, pregunta: "¿Cuál es el discriminante de ax² + bx + c?", opciones: ["b² - 4ac", "b² + 4ac", "a² - 4bc", "c² - 4ab"], correcta: 0 },
+    { id: 7, pregunta: "¿Cuánto es sen(90°)?", opciones: ["1", "0", "-1", "0.5"], correcta: 0 },
+    { id: 8, pregunta: "¿Cuál es la fórmula del área de un círculo?", opciones: ["πr²", "2πr", "πd", "r²π/2"], correcta: 0 }
+  ],
+
+  "ensenanzas-religiosas-avanzado": [
+    { id: 1, pregunta: "¿Cuántos libros tiene el Nuevo Testamento?", opciones: ["27", "39", "66", "12"], correcta: 0 },
+    { id: 2, pregunta: "¿Quién escribió la mayoría de las epístolas del Nuevo Testamento?", opciones: ["Pablo", "Pedro", "Juan", "Santiago"], correcta: 0 },
+    { id: 3, pregunta: "¿Qué significa la palabra 'evangelio'?", opciones: ["Buena noticia", "Ley sagrada", "Profecía", "Mandamiento"], correcta: 0 },
+    { id: 4, pregunta: "¿Cuál es el sacramento que inicia la vida cristiana?", opciones: ["Bautismo", "Comunión", "Confirmación", "Confesión"], correcta: 0 },
+    { id: 5, pregunta: "¿Qué concilio definió la doctrina de la Trinidad?", opciones: ["Nicea", "Trento", "Vaticano I", "Jerusalén"], correcta: 0 },
+    { id: 6, pregunta: "¿Quién fue el último profeta del Antiguo Testamento?", opciones: ["Malaquías", "Isaías", "Jeremías", "Daniel"], correcta: 0 },
+    { id: 7, pregunta: "¿Qué virtud teologal implica confiar en Dios?", opciones: ["Esperanza", "Fe", "Caridad", "Prudencia"], correcta: 0 },
+    { id: 8, pregunta: "¿Cuál es el libro más largo de la Biblia?", opciones: ["Salmos", "Isaías", "Génesis", "Éxodo"], correcta: 0 }
+  ],
+
+  "ingles-avanzado": [
+    { id: 1, pregunta: "What is the past tense of 'go'?", opciones: ["Went", "Gone", "Going", "Goed"], correcta: 0 },
+    { id: 2, pregunta: "Which sentence is correct?", opciones: ["She has been working", "She have been working", "She has working been", "She been has working"], correcta: 0 },
+    { id: 3, pregunta: "What is a synonym for 'beautiful'?", opciones: ["Gorgeous", "Ugly", "Simple", "Plain"], correcta: 0 },
+    { id: 4, pregunta: "Choose the correct conditional: 'If I ___ rich, I would travel.'", opciones: ["were", "am", "will be", "was being"], correcta: 0 },
+    { id: 5, pregunta: "What is the plural of 'child'?", opciones: ["Children", "Childs", "Childes", "Childeren"], correcta: 0 },
+    { id: 6, pregunta: "Which word is an adverb?", opciones: ["Quickly", "Quick", "Quickness", "Quicken"], correcta: 0 },
+    { id: 7, pregunta: "What does 'procrastinate' mean?", opciones: ["To delay or postpone", "To hurry", "To complete", "To begin"], correcta: 0 },
+    { id: 8, pregunta: "Choose the correct relative pronoun: 'The book ___ I read was amazing.'", opciones: ["that", "who", "whom", "whose"], correcta: 0 }
+  ]
+};

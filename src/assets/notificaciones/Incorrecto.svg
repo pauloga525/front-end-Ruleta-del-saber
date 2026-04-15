@@ -1,0 +1,14 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo rojo -->
+  <circle cx="100" cy="100" r="100" fill="#F44336"/>
+  
+  <!-- Borde blanco -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="white" stroke-width="5"/>
+  
+  <!-- X (equis) -->
+  <path d="M 60 60 L 140 140" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 140 60 L 60 140" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Texto "INCORRECTO" -->
+  <text x="100" y="170" font-size="20" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">INCORRECTO</text>
+</svg>

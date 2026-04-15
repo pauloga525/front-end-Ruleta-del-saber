@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo verde -->
+  <circle cx="100" cy="100" r="100" fill="#4CAF50"/>
+  
+  <!-- Borde blanco -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="white" stroke-width="5"/>
+  
+  <!-- Checkmark (palomita) -->
+  <path d="M 60 100 L 85 125 L 140 70" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Texto "CORRECTO" -->
+  <text x="100" y="170" font-size="24" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">CORRECTO</text>
+</svg>

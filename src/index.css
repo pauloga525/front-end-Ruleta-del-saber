@@ -1,0 +1,104 @@
+/* Para la animación 'circle' */
+@keyframes circleExpand {
+  to {
+    width: 200vw;
+    height: 200vw;
+  }
+}
+
+/* Para la animación 'fade' (ejemplo de un fade simple) */
+@keyframes fadeCircle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    width: 200vw;
+    height: 200vw;
+  }
+}
+
+/* Para la animación 'spinner' */
+@keyframes spinnerRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* Código para eliminar el margen blanco en los bordes de la pantalla */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Fondo oscuro consistente para prevenir destellos */
+    background-color: #051535;
+}
+
+/* Transición suave entre páginas */
+.page-transition {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Optimizar carga de imágenes de fondo */
+[style*="background-image"] {
+    background-color: #051535;
+}
+@keyframes rotarRuleta {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animación fade para transiciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade más rápido para navegaciones */
+@keyframes fadeInFast {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mejorar experiencia táctil en dispositivos móviles */
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Evitar zoom no deseado en inputs en iOS */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Mejorar rendimiento de animaciones */
+* {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Optimizar renderizado de imágenes */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  will-change: transform;
+}
