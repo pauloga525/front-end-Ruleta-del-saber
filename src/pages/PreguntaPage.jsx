@@ -52,8 +52,18 @@ export default function PreguntaPage() {
 	// Obtener el nombre correcto de la materia
 	const materiaDisplay = nombresMaterias[materia] || materia.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
 	
-	// Obtener curso desde location.state o desde la URL
-	const curso = location?.state?.curso || location?.state?.sector?.curso;
+	// Obtener curso desde location.state (enviado por la ruleta via navigate)
+	const curso = location?.state?.curso || location?.state?.sector?.curso || null;
+	
+	// Log de depuración para verificar que el curso llega correctamente
+	console.log(`🔍 PreguntaPage - materia: "${materia}", curso recibido: "${curso}"`);
+	console.log(`🔍 location.state completo:`, location?.state);
+	console.log(`🌐 URL del fetch será: /api/preguntas/${materia}${curso ? `?curso=${encodeURIComponent(curso)}` : ' (SIN curso - revisar navigate)'}`);
+	
+	if (!curso) {
+		console.warn(`⚠️ ADVERTENCIA: curso es null/undefined. Las preguntas NO se filtrarán por curso.`);
+		console.warn(`⚠️ Verifica que el navigate() en la ruleta incluya: state: { curso: "1ro", ... }`);
+	}
 	
 	// Obtener el nombre formateado del curso
 	const cursoDisplay = curso ? (nombresCursos[curso.toLowerCase()] || curso) : curso;
@@ -268,6 +278,7 @@ export default function PreguntaPage() {
 	// Cargar preguntas de la base de datos
 	useEffect(() => {
 		let mounted = true;
+		
 		async function fetchPreguntas() {
 			setCargandoPreguntas(true);
 			setErrorCarga(null);
@@ -1883,6 +1894,11 @@ draggable={false}
 	}
 
 	if (errorCarga || numPreguntas === 0) {
+		const sinPreguntas = !errorCarga && numPreguntas === 0;
+		const mensajePrincipal = sinPreguntas
+			? `No hay preguntas para "${materiaDisplay}"${curso ? ` en el curso ${cursoDisplay || curso}` : ""}`
+			: errorCarga;
+
 		return (
 			<div
 				style={{
@@ -1907,25 +1923,37 @@ draggable={false}
 					maxWidth: "600px",
 					textAlign: "center"
 				}}>
-					<p style={{ fontSize: "28px", marginBottom: "20px", fontFamily: "'Montserrat', sans-serif" }}>⚠️ {errorCarga || "No hay preguntas disponibles"}</p>
-					<p style={{ fontSize: "16px", marginTop: "20px", color: "#ffeb3b", fontFamily: "'Montserrat', sans-serif" }}>
-						Asegúrate de que:
+					<p style={{ fontSize: "48px", marginBottom: "10px" }}>
+						{sinPreguntas ? "📭" : "⚠️"}
 					</p>
-					<ul style={{ 
-						fontSize: "14px", 
-						textAlign: "left", 
-						marginTop: "15px",
-						lineHeight: "1.8",
-						fontFamily: "'Montserrat', sans-serif",
-					}}>
-						<li>El backend de Python esté corriendo (ejecuta: <code style={{ backgroundColor: "rgba(255,255,255,0.2)", padding: "2px 8px", borderRadius: "3px" }}>python app.py</code>)</li>
-						<li>MongoDB esté activo y tenga las preguntas migradas</li>
-						<li>La categoría "{materiaDisplay}" exista en la base de datos</li>
-					</ul>
+					<p style={{ fontSize: "22px", marginBottom: "20px", fontFamily: "'Montserrat', sans-serif", fontWeight: "bold" }}>
+						{mensajePrincipal}
+					</p>
+					{sinPreguntas ? (
+						<p style={{ fontSize: "15px", color: "#aed6f1", fontFamily: "'Montserrat', sans-serif" }}>
+							Aún no se han cargado preguntas para este nivel en la base de datos.
+						</p>
+					) : (
+						<>
+							<p style={{ fontSize: "16px", marginTop: "20px", color: "#ffeb3b", fontFamily: "'Montserrat', sans-serif" }}>
+								Asegúrate de que:
+							</p>
+							<ul style={{ 
+								fontSize: "14px", 
+								textAlign: "left", 
+								marginTop: "15px",
+								lineHeight: "1.8",
+								fontFamily: "'Montserrat', sans-serif",
+							}}>
+								<li>El backend de Python esté corriendo (ejecuta: <code style={{ backgroundColor: "rgba(255,255,255,0.2)", padding: "2px 8px", borderRadius: "3px" }}>python app.py</code>)</li>
+								<li>MongoDB esté activo y tenga las preguntas migradas</li>
+								<li>La categoría "{materiaDisplay}" exista en la base de datos</li>
+							</ul>
+						</>
+					)}
 					<button
 						onClick={() => {
 							sessionStorage.removeItem(sessionKey);
-							console.log(`🧹 Limpiando preguntas respondidas al regresar`);
 							navigate(-1);
 						}}
 						style={{

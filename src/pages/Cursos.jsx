@@ -50,6 +50,7 @@ const cursosPorEspecialidad = {
 };
 
 const cursosAvanzados = ["1rob", "2dob", "3rob"];
+const cursosBasicaElementalMedia = ["2do", "3ro", "4to", "5to", "6to", "7mo"];
 
 export default function Cursos() {
   const { especialidad } = useParams();
@@ -64,8 +65,15 @@ export default function Cursos() {
   const cursos = useMemo(() => cursosPorEspecialidad[especialidad] || [], [especialidad]);
 
   const navegarARuleta = useCallback((curso) => {
-    const rutaBase = cursosAvanzados.includes(curso) ? "/ruleta-avanzada" : "/ruleta-basica";
-    iniciarTransicion(`${rutaBase}/${especialidad}/${curso}`);
+    if (especialidad === "preparatoria" && curso === "1ro") {
+      iniciarTransicion(`/ruleta/primero`);
+    } else if (cursosBasicaElementalMedia.includes(curso)) {
+      iniciarTransicion(`/ruleta/basica/${especialidad}/${curso}`);
+    } else if (cursosAvanzados.includes(curso)) {
+      iniciarTransicion(`/ruleta-avanzada/${especialidad}/${curso}`);
+    } else {
+      iniciarTransicion(`/ruleta-basica/${especialidad}/${curso}`);
+    }
   }, [especialidad, iniciarTransicion]);
 
   return (

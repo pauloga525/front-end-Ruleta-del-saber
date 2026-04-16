@@ -6,6 +6,7 @@ import flechaImg from "../assets/ruleta/flecha.png";
 import fondoImg from "../assets/fondos/fondoruleta.png";
 import botonGirarImg from "../assets/botones/girar.png";
 
+
 const SECTORES_RUEDA = [
     { id: 1, nombre: "Sector 1: Historia", ruta: "historia" }, 
     { id: 2, nombre: "Sector 2: Fisica", ruta: "fisica" },  

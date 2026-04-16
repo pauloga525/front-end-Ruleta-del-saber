@@ -9,6 +9,8 @@ const Cursos = lazy(() => import("./pages/Cursos"));
 const RuletaPage = lazy(() => import("./pages/RuletaPage"));
 const RuletaComponent2 = lazy(() => import("./components/RuletaComponent2"));
 const RuletaComponent = lazy(() => import("./components/RuletaComponent"));
+const RuletaPrimero = lazy(() => import("./components/RuletaPrimero"));
+const RuletaBasica = lazy(() => import("./components/RuletaBasica"));
 const PreguntaPage = lazy(() => import("./pages/PreguntaPage"));
 
 // Componente de carga mejorado sin destello
@@ -63,6 +65,8 @@ export default function App() {
       
         <Route path="/ruleta-basica/:especialidad/:curso" element={<PageWrapper><RuletaComponent2 /></PageWrapper>} />
         <Route path="/ruleta-avanzada/:especialidad/:curso" element={<PageWrapper><RuletaComponent /></PageWrapper>} />
+        <Route path="/ruleta/primero" element={<PageWrapper><RuletaPrimero /></PageWrapper>} />
+        <Route path="/ruleta/basica/:especialidad/:curso" element={<PageWrapper><RuletaBasica /></PageWrapper>} />
         
         {/* Página de preguntas: recibe el parámetro 'materia' */}
         <Route path="/preguntas/:materia" element={<PageWrapper><PreguntaPage /></PageWrapper>} />
