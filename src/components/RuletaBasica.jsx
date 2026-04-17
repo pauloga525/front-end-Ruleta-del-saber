@@ -325,8 +325,8 @@ export default function RuletaBasica({ onFinish }) {
                 <img
                     src={ruletaImg} alt="ruleta"
                     style={{
-                        width: "88%", height: "87%", objectFit: "contain",
-                        position: "absolute", top: "53%", left: "52%",
+                        width: "min(80vmin, 800px)", height: "min(80vmin, 800px)",
+                        position: "absolute", top: "56%", left: "55%",
                         transform: `translate(-50%, -50%) rotate(${angle}deg)`,
                         transformOrigin: "50% 50%",
                         transition: spinning ? 'none' : 'transform 0.6s ease-out',

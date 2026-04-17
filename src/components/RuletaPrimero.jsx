@@ -8,9 +8,9 @@ import botonGirarImg from "../assets/botones/girar.png";
 const SECTORES_RUEDA = [
     { id: 1, nombre: "Relaciones lógico matemáticas", ruta: "relaciones-logico-matematicas" },
     { id: 2, nombre: "Expresión oral y escrita", ruta: "expresion-oral-y-escrita" },
-    { id: 3, nombre: "Descubrimiento del medio natural y cultural", ruta: "descubrimiento-medio-natural-cultural" },
-    { id: 4, nombre: "Identidad y Autonomía", ruta: "identidad-y-autonomia" },
-    { id: 5, nombre: "Inglés", ruta: "ingles" },
+    { id: 3, nombre: "Identidad y Autonomía", ruta: "identidad-y-autonomia" },
+    { id: 4, nombre: "Inglés", ruta: "ingles" },
+    { id: 5, nombre: "Descubrimiento del medio natural y cultural", ruta: "descubrimiento-medio-natural-cultural" },
 ];
 
 // Valores fijos para esta ruleta: Preparatoria > Primero
@@ -150,18 +150,18 @@ export default function RuletaPrimero({ onFinish }) {
         } catch {}
     }
 
-    const ANGULO_POR_SECTOR = 360 / SECTORES_RUEDA.length;
-    const OFFSET_INICIAL = 0;
+    const ANGULO_POR_SECTOR = 360 / SECTORES_RUEDA.length; // 72° por sector
+    // La imagen en reposo tiene el sector 1 (Relaciones) centrado a 36° a la derecha del tope (arriba).
+    // El apuntador está arriba → offset = -(ANGULO_POR_SECTOR / 2) = -36
+    const OFFSET_INICIAL = -36;
 
     const determinarResultado = (anguloFinal) => {
         const numSectores = SECTORES_RUEDA.length;
         let norm = anguloFinal % 360;
         if (norm < 0) norm += 360;
-        let ref = (360 - norm + OFFSET_INICIAL) % 360;
+        let ref = (360 - norm + OFFSET_INICIAL + ANGULO_POR_SECTOR / 2.5) % 360;
         if (ref < 0) ref += 360;
-        let desplazado = (ref + ANGULO_POR_SECTOR / 2) % 360;
-        if (desplazado < 0) desplazado += 360;
-        let idx = Math.floor(desplazado / ANGULO_POR_SECTOR);
+        let idx = Math.floor(ref / ANGULO_POR_SECTOR);
         if (idx >= numSectores) idx = numSectores - 1;
         return SECTORES_RUEDA[idx];
     };
@@ -333,10 +333,10 @@ export default function RuletaPrimero({ onFinish }) {
                 <img
                     src={ruletaImg} alt="ruleta"
                     style={{
-                        width: "88%", height: "87%", objectFit: "contain",
-                        position: "absolute", top: "53%", left: "52%",
+                        width: "min(80vmin, 800px)", height: "min(80vmin, 800px)",
+                        position: "absolute", top: "53%", left: "55%",
                         transform: `translate(-50%, -50%) rotate(${angle}deg)`,
-                        transformOrigin: "50% 50%",
+                        transformOrigin: "50% 51%",
                         transition: spinning ? 'none' : 'transform 0.6s ease-out',
                         willChange: 'transform', zIndex: 10,
                         userSelect: "none", pointerEvents: "none",
